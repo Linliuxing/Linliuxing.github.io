@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Elasticsearch6.3.2及其head插件安装]]></title>
+    <url>%2F2018%2F08%2F29%2FElasticsearch6-3-2%E5%8F%8A%E5%85%B6head%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%2F</url>
+    <content type="text"><![CDATA[下载并解压Elasticsearch6.3.2 进入config文件夹修改elasticsearch.yml文件 1234567891011121314151617# 集群的名字 cluster.name: my-es# 节点名字 node.name: node-1 # 数据存储目录（多个路径用逗号分隔） path.data: /home/els/es/data# 日志目录 path.logs: /home/els/es/log #本机的ip地址network.host: 192.168.0.197 # 设置节点间交互的tcp端口（集群）,(默认9300) transport.tcp.port: 9300 # 监听端口（默认） http.port: 9200 # 增加参数，使head插件可以访问es http.cors.enabled: true http.cors.allow-origin: &quot;*&quot; 进入bin文件夹启动es ./elasticsearch 下载载并解压head插件 修改_site文件夹中的app.js 1this.base_uri = this.config.base_uri || this.prefs.get(&quot;app-base_uri&quot;) || &quot;http://192.168.0.197:9200&quot;; 安装npm 1yum install git npm 安装grunt 1npm install -g grunt-cli 启动head 1grunt server]]></content>
+      <tags>
+        <tag>elasticsearch</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[hexo github搭建博客常用的命令]]></title>
     <url>%2F2018%2F08%2F29%2Fhexo-github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4%2F</url>
     <content type="text"><![CDATA[常用命令 npm install hexo -g #安装 npm update hexo -g #升级 hexo init #初始化 hexo new “postName” #新建文章 hexo new page “pageName” #新建页面 hexo generate #生成静态页面至public目录 hexo server #开启预览访问端口（默认端口4000，’ctrl + c’关闭server） hexo deploy #将.deploy目录部署到GitHub hexo n #写文章 hexo g #生成 hexo d #部署 #可与hexo g合并为hexo d -g 一般操作，在博客目录下调出cmd命令窗口：1hexo new post &quot;xx&quot; 在E:\Blog\source_posts下，找到xx.md 用markdown编辑，完成后，先开启本地测试hexo s]]></content>
