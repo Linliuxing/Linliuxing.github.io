@@ -373,24 +373,21 @@
       
         
           
-            <h5 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h5><ol>
-<li>npm install hexo -g #安装</li>
-<li>npm update hexo -g #升级</li>
-<li>hexo init #初始化</li>
-<li>hexo new “postName” #新建文章</li>
-<li>hexo new page “pageName” #新建页面</li>
-<li>hexo generate #生成静态页面至public目录</li>
-<li>hexo server #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）</li>
-<li>hexo deploy #将.deploy目录部署到GitHub</li>
-<li>hexo n #写文章</li>
-<li>hexo g #生成</li>
-<li>hexo d #部署 #可与hexo g合并为hexo d -g </li>
-</ol>
-<h5 id="一般操作，在博客目录下调出cmd命令窗口："><a href="#一般操作，在博客目录下调出cmd命令窗口：" class="headerlink" title="一般操作，在博客目录下调出cmd命令窗口："></a>一般操作，在博客目录下调出cmd命令窗口：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new post &quot;xx&quot;</span><br></pre></td></tr></table></figure>
-<p>在E:\Blog\source_posts下，找到xx.md</p>
-<p>用markdown编辑，完成后，先开启本地测试hexo s</p>
-
-          
+          常用命令
+npm install hexo -g #安装
+npm update hexo -g #升级
+hexo init #初始化
+hexo new “postName” #新建文章
+hexo new page “pageName” #新建页面
+hexo generate #生成静态页面至publ
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/08/29/hexo-github搭建博客常用的命令/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -561,31 +558,18 @@
       
         
           
-            <h5 id="常见的负载均衡"><a href="#常见的负载均衡" class="headerlink" title="常见的负载均衡"></a>常见的负载均衡</h5><ol>
-<li>热备：如果你有2台服务器，当一台服务器发生事故时，才启用第二台服务器给提供服务。服务器处理请求的顺序：AAAAAA突然A挂啦，BBBBBBBBBBBBBB…..</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">upstream mysvr &#123; </span><br><span class="line">      server 127.0.0.1:7878; </span><br><span class="line">      server 192.168.10.121:3333 backup;  #热备     </span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>轮询：nginx默认就是轮询其权重都默认为1，服务器处理请求的顺序：ABABABABAB….</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">upstream mysvr &#123; </span><br><span class="line">      server 127.0.0.1:7878;</span><br><span class="line">      server 192.168.10.121:3333;       </span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>加权轮询：跟据配置的权重的大小而分发给不同服务器不同数量的请求。如果不设置，则默认为1。下面服务器的请求顺序为：ABBABBABBABBABB….</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> upstream mysvr &#123; </span><br><span class="line">      server 127.0.0.1:7878 weight=1;</span><br><span class="line">      server 192.168.10.121:3333 weight=2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>ip_hash:nginx会让相同的客户端ip请求相同的服务器。</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">upstream mysvr &#123; </span><br><span class="line">      server 127.0.0.1:7878; </span><br><span class="line">      server 192.168.10.121:3333;</span><br><span class="line">      ip_hash;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<h5 id="关于nginx负载均衡配置的几个状态参数讲解"><a href="#关于nginx负载均衡配置的几个状态参数讲解" class="headerlink" title="关于nginx负载均衡配置的几个状态参数讲解"></a>关于nginx负载均衡配置的几个状态参数讲解</h5><ul>
-<li>down，表示当前的server暂时不参与负载均衡。</li>
-<li>backup，预留的备份机器。当其他所有的非backup机器出现故障或者忙的时候，才会请求backup机器，因此这台机器的压力最轻。</li>
-<li>max_fails，允许请求失败的次数，默认为1。当超过最大次数时，返回proxy_next_upstream 模块定义的错误。</li>
-<li>fail_timeout，在经历了max_fails次失败后，暂停服务的时间。max_fails可以和fail_timeout一起使用。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">upstream mysvr &#123; </span><br><span class="line">     server 127.0.0.1:7878 weight=2 max_fails=2 fail_timeout=2;</span><br><span class="line">     server 192.168.10.121:3333 weight=1 max_fails=2 fail_timeout=1;    </span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+          常见的负载均衡
+热备：如果你有2台服务器，当一台服务器发生事故时，才启用第二台服务器给提供服务。服务器处理请求的顺序：AAAAAA突然A挂啦，BBBBBBBBBBBBBB…..
 
-          
+1234upstream mysvr &#123;       server 127.0.0.1:7878;      
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/08/28/Nginx负载均衡详解/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -734,21 +718,21 @@
       
         
           
-            <ol>
-<li>基于 Java 8，支持 Java 9，这意味着不可以使用JDK7 或更旧的版本运行SpringBoot2.</li>
-<li>支持 Quartz 调度程序</li>
-<li>大大简化了安全自动配置</li>
-<li>支持嵌入式 Netty</li>
-<li>Tomcat, Undertow 和 Jetty 均已支持 HTTP/2</li>
-<li>全新的执行器架构，支持 Spring MVC, WebFlux 和 Jersey</li>
-<li>使用 Spring WebFlux/WebFlux.fn 提供响应式 Web 编程支持</li>
-<li>为各种组件的响应式编程提供了自动化配置，如：Reactive Spring Data、Reactive Spring Security 等</li>
-<li>用于响应式 Spring Data Cassandra, MongoDB, Couchbase 和 Redis 的自动化配置和启动器 POM</li>
-<li>引入对 Kotlin 1.2.x 的支持，并提供了一个 runApplication 函数，让你通过惯用的 Kotlin 来运行 Spring Boot 应用程序。更多信息请参阅参考文档中对 Kotlin 的支持部分</li>
-<li>启动时的 ASCII 图像 Spring Boot banner 现已支持 GIF </li>
-</ol>
-
           
+基于 Java 8，支持 Java 9，这意味着不可以使用JDK7 或更旧的版本运行SpringBoot2.
+支持 Quartz 调度程序
+大大简化了安全自动配置
+支持嵌入式 Netty
+Tomcat, Undertow 和 Jetty 均已支持 HTTP/2
+全新的执行器架构，支持 Spring
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/08/28/SpringBoot2-X新特性/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -919,8 +903,15 @@
       
         
           
-            <h1 id="欢迎来到我的博客世界"><a href="#欢迎来到我的博客世界" class="headerlink" title="欢迎来到我的博客世界"></a>欢迎来到我的博客世界</h1>
+          欢迎来到我的博客世界
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/08/28/My-Blog/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
