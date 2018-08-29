@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[hexo github搭建博客常用的命令]]></title>
+    <url>%2F2018%2F08%2F29%2Fhexo-github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[常用命令 npm install hexo -g #安装 npm update hexo -g #升级 hexo init #初始化 hexo new “postName” #新建文章 hexo new page “pageName” #新建页面 hexo generate #生成静态页面至public目录 hexo server #开启预览访问端口（默认端口4000，’ctrl + c’关闭server） hexo deploy #将.deploy目录部署到GitHub hexo n #写文章 hexo g #生成 hexo d #部署 #可与hexo g合并为hexo d -g 一般操作，在博客目录下调出cmd命令窗口：1hexo new post &quot;xx&quot; 在E:\Blog\source_posts下，找到xx.md 用markdown编辑，完成后，先开启本地测试hexo s]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Nginx负载均衡详解]]></title>
+    <url>%2F2018%2F08%2F28%2FNginx%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%AF%A6%E8%A7%A3%2F</url>
+    <content type="text"><![CDATA[常见的负载均衡 热备：如果你有2台服务器，当一台服务器发生事故时，才启用第二台服务器给提供服务。服务器处理请求的顺序：AAAAAA突然A挂啦，BBBBBBBBBBBBBB….. 1234upstream mysvr &#123; server 127.0.0.1:7878; server 192.168.10.121:3333 backup; #热备 &#125; 轮询：nginx默认就是轮询其权重都默认为1，服务器处理请求的顺序：ABABABABAB…. 1234upstream mysvr &#123; server 127.0.0.1:7878; server 192.168.10.121:3333; &#125; 加权轮询：跟据配置的权重的大小而分发给不同服务器不同数量的请求。如果不设置，则默认为1。下面服务器的请求顺序为：ABBABBABBABBABB…. 1234 upstream mysvr &#123; server 127.0.0.1:7878 weight=1; server 192.168.10.121:3333 weight=2;&#125; ip_hash:nginx会让相同的客户端ip请求相同的服务器。 12345upstream mysvr &#123; server 127.0.0.1:7878; server 192.168.10.121:3333; ip_hash; &#125; 关于nginx负载均衡配置的几个状态参数讲解 down，表示当前的server暂时不参与负载均衡。 backup，预留的备份机器。当其他所有的非backup机器出现故障或者忙的时候，才会请求backup机器，因此这台机器的压力最轻。 max_fails，允许请求失败的次数，默认为1。当超过最大次数时，返回proxy_next_upstream 模块定义的错误。 fail_timeout，在经历了max_fails次失败后，暂停服务的时间。max_fails可以和fail_timeout一起使用。 1234upstream mysvr &#123; server 127.0.0.1:7878 weight=2 max_fails=2 fail_timeout=2; server 192.168.10.121:3333 weight=1 max_fails=2 fail_timeout=1; &#125;]]></content>
+      <categories>
+        <category>Nginx</category>
+      </categories>
+      <tags>
+        <tag>Nginx</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[SpringBoot2.X新特性]]></title>
+    <url>%2F2018%2F08%2F28%2FSpringBoot2-X%E6%96%B0%E7%89%B9%E6%80%A7%2F</url>
+    <content type="text"><![CDATA[基于 Java 8，支持 Java 9，这意味着不可以使用JDK7 或更旧的版本运行SpringBoot2. 支持 Quartz 调度程序 大大简化了安全自动配置 支持嵌入式 Netty Tomcat, Undertow 和 Jetty 均已支持 HTTP/2 全新的执行器架构，支持 Spring MVC, WebFlux 和 Jersey 使用 Spring WebFlux/WebFlux.fn 提供响应式 Web 编程支持 为各种组件的响应式编程提供了自动化配置，如：Reactive Spring Data、Reactive Spring Security 等 用于响应式 Spring Data Cassandra, MongoDB, Couchbase 和 Redis 的自动化配置和启动器 POM 引入对 Kotlin 1.2.x 的支持，并提供了一个 runApplication 函数，让你通过惯用的 Kotlin 来运行 Spring Boot 应用程序。更多信息请参阅参考文档中对 Kotlin 的支持部分 启动时的 ASCII 图像 Spring Boot banner 现已支持 GIF]]></content>
+      <tags>
+        <tag>SpringBoot2</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[My Blog]]></title>
+    <url>%2F2018%2F08%2F28%2FMy-Blog%2F</url>
+    <content type="text"><![CDATA[欢迎来到我的博客世界]]></content>
+      <categories>
+        <category>Welcome</category>
+      </categories>
+  </entry>
+</search>
