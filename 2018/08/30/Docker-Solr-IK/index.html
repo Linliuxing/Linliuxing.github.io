@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Docker,Solr," />
 
 
 
@@ -86,13 +86,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="皮卡皮卡丘">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta name="description" content="docker安装solr  1docker pull solr  启动solr镜像  1docker run -d -p 8983:8983 --name mysolr solr 123451. run 运行容器2. -d 代表后台运行3. -p 容器端口和宿机端口映射4. --name 容器名称5. solr 镜像名称  新建core  1docker exec -it --user=solr">
+<meta name="keywords" content="Docker,Solr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker+Solr+IK">
+<meta property="og:url" content="http://yoursite.com/2018/08/30/Docker-Solr-IK/index.html">
 <meta property="og:site_name" content="皮卡皮卡丘">
+<meta property="og:description" content="docker安装solr  1docker pull solr  启动solr镜像  1docker run -d -p 8983:8983 --name mysolr solr 123451. run 运行容器2. -d 代表后台运行3. -p 容器端口和宿机端口映射4. --name 容器名称5. solr 镜像名称  新建core  1docker exec -it --user=solr">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-08-30T03:09:36.056Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="皮卡皮卡丘">
+<meta name="twitter:title" content="Docker+Solr+IK">
+<meta name="twitter:description" content="docker安装solr  1docker pull solr  启动solr镜像  1docker run -d -p 8983:8983 --name mysolr solr 123451. run 运行容器2. -d 代表后台运行3. -p 容器端口和宿机端口映射4. --name 容器名称5. solr 镜像名称  新建core  1docker exec -it --user=solr">
 
 
 
@@ -122,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/30/Docker-Solr-IK/"/>
 
 
 
 
 
-  <title>归档 | 皮卡皮卡丘</title>
+  <title>Docker+Solr+IK | 皮卡皮卡丘</title>
   
 
 
@@ -147,7 +152,7 @@
     
   
 
-  <div class="container sidebar-position-right page-archive">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>	
 	
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -285,370 +290,298 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/30/Docker-Solr-IK/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="珈蓝城下&7">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/pikaqiu.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="皮卡皮卡丘">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">Docker+Solr+IK</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-30T11:06:00+08:00">
+                2018-08-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 9 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Docker/" itemprop="url" rel="index">
+                    <span itemprop="name">Docker</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
 
-        
+          
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/08/30/SpringBoot集成Solr-1/" itemprop="url">
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-eye"></i>浏览
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
               
-                <span itemprop="name">SpringBoot集成Solr</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  574字
+                </span>
               
-            </a>
-        
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-30T11:28:00+08:00"
-              content="2018-08-30" >
-          08-30
-        </time>
-      </div>
+              
+                <span class="post-meta-divider">|</span>
+              
 
-    </header>
-  </article>
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3分钟
+                </span>
+              
+            </div>
+          
 
+          
 
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/08/30/Docker-Solr-IK/" itemprop="url">
-              
-                <span itemprop="name">Docker+Solr+IK</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-30T11:06:00+08:00"
-              content="2018-08-30" >
-          08-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/08/29/SpringBoot集成Memcached/" itemprop="url">
-              
-                <span itemprop="name">SpringBoot集成Memcached</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-29T16:54:00+08:00"
-              content="2018-08-29" >
-          08-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <ol>
+<li>docker安装solr</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull solr</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>启动solr镜像</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 8983:8983 --name mysolr solr</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. run 运行容器</span><br><span class="line">2. -d 代表后台运行</span><br><span class="line">3. -p 容器端口和宿机端口映射</span><br><span class="line">4. --name 容器名称</span><br><span class="line">5. solr 镜像名称</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>新建core</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it --user=solr mysolr bin/solr create_core -c ik_core</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>进入solr容器</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it -u root mysolr /bin/bash</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>安装vim(编辑容器里的文件)</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-get update</span><br><span class="line">apt-get install vim</span><br></pre></td></tr></table></figure>
+<ol start="6">
+<li>安装rzsz(上传下载容器里的文件)</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install lrzsz</span><br></pre></td></tr></table></figure>
+<ol start="7">
+<li>进入/opt/solr/server/solr-webapp/webapp/WEB-INF/lib添加jar包</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ik-analyzer-7.4.0.jar</span><br><span class="line">mysql-connector-java-8.0.11.jar</span><br><span class="line">solr-dataimporthandler-7.4.0.jar</span><br><span class="line">solr-dataimporthandler-extras-7.4.0.jar</span><br></pre></td></tr></table></figure>
+<ol start="8">
+<li>进入/opt/solr/server/solr/ik_core/conf，新建data-config.xml</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;dataConfig&gt;</span><br><span class="line">    &lt;dataSource name=&quot;source1&quot; type=&quot;JdbcDataSource&quot;</span><br><span class="line">              driver=&quot;com.mysql.jdbc.Driver&quot;</span><br><span class="line">              url=&quot;jdbc:mysql://***.**.**.**:3306/*****&quot;</span><br><span class="line">              user=&quot;***&quot;</span><br><span class="line">              password=&quot;*****&quot;</span><br><span class="line">              batchSize=&quot;-1&quot; /&gt;</span><br><span class="line">    &lt;document&gt;</span><br><span class="line">        &lt;entity name=&quot;service_info&quot; dataSource=&quot;source1&quot;</span><br><span class="line">            query=&quot;SELECT id,title,business_type_id,category_id , service_price , service_time,service_desc,service_area,</span><br><span class="line">			cover,click_count,create_by,create_date,del_flag FROM service_info where del_flag = 1&quot;&gt;</span><br><span class="line">     </span><br><span class="line">            &lt;field column=&apos;id&apos; name=&apos;id&apos; /&gt;</span><br><span class="line">			&lt;field column=&apos;title&apos; name=&apos;title&apos; /&gt;</span><br><span class="line">            &lt;field column=&apos;business_type_id&apos; name=&apos;business_type_id&apos; /&gt;</span><br><span class="line">            &lt;field column=&apos;category_id&apos; name=&apos;category_id&apos; /&gt;</span><br><span class="line">            &lt;field column=&apos;service_price&apos; name=&apos;service_price&apos; /&gt;</span><br><span class="line">            &lt;field column=&apos;service_time&apos; name=&apos;service_time&apos; /&gt;</span><br><span class="line">            &lt;field column=&apos;service_desc&apos; name=&apos;service_desc&apos; /&gt;</span><br><span class="line">            &lt;field column=&apos;service_area&apos; name=&apos;service_area&apos; /&gt;</span><br><span class="line">			&lt;field column=&apos;cover&apos; name=&apos;cover&apos; /&gt;</span><br><span class="line">			&lt;field column=&apos;click_count&apos; name=&apos;click_count&apos; /&gt;</span><br><span class="line">            &lt;field column=&apos;create_by&apos; name=&apos;create_by&apos; /&gt;</span><br><span class="line">            &lt;field column=&apos;create_date&apos; name=&apos;create_date&apos; /&gt;</span><br><span class="line">			&lt;field column=&apos;del_flag&apos; name=&apos;del_flag&apos; /&gt;</span><br><span class="line">        &lt;/entity&gt;</span><br><span class="line">    &lt;/document&gt;</span><br><span class="line">&lt;/dataConfig&gt;</span><br></pre></td></tr></table></figure>
+<ol start="9">
+<li>配置managed-schema，加入IK分词</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">   &lt;!-- ik分词器 --&gt;</span><br><span class="line">&lt;fieldType name=&quot;text_ik&quot; class=&quot;solr.TextField&quot;&gt;  </span><br><span class="line">       &lt;analyzer type=&quot;index&quot; useSmart=&quot;false&quot;</span><br><span class="line">           class=&quot;org.wltea.analyzer.lucene.IKAnalyzer&quot; /&gt;</span><br><span class="line">       &lt;analyzer type=&quot;query&quot; useSmart=&quot;true&quot;</span><br><span class="line">           class=&quot;org.wltea.analyzer.lucene.IKAnalyzer&quot; /&gt;</span><br><span class="line">&lt;/fieldType&gt; </span><br><span class="line"></span><br><span class="line">&lt;field name=&apos;id&apos; type=&quot;string&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">&lt;field name=&apos;title&apos; type=&quot;text_ik&quot; indexed=&quot;true&quot; stored=&quot;true&quot; omitNorms = &quot;false&quot; omitTermFreqAndPositions =&quot;false&quot;/&gt;</span><br><span class="line">   &lt;field name=&apos;business_type_id&apos; type=&quot;string&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">   &lt;field name=&apos;category_id&apos; type=&quot;string&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">   &lt;field name=&apos;service_price&apos; type=&quot;string&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">   &lt;field name=&apos;service_time&apos; type=&quot;string&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">   &lt;field name=&apos;service_desc&apos; type=&quot;text_ik&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">   &lt;field name=&apos;service_area&apos; type=&quot;text_ik&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">&lt;field name=&apos;cover&apos; type=&quot;string&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">&lt;field name=&apos;click_count&apos; type=&quot;string&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">   &lt;field name=&apos;create_by&apos; type=&quot;string&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">   &lt;field name=&apos;create_date&apos; type=&quot;string&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">&lt;field name=&apos;del_flag&apos; type=&quot;string&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br></pre></td></tr></table></figure>
+<ol start="10">
+<li>配置solrconfig.xml</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;requestHandler name=&quot;/dataimport&quot; class=&quot;org.apache.solr.handler.dataimport.DataImportHandler&quot;&gt;</span><br><span class="line">　　     &lt;lst name=&quot;defaults&quot;&gt;</span><br><span class="line">　　        &lt;str name=&quot;config&quot;&gt;data-config.xml&lt;/str&gt;</span><br><span class="line">　　     &lt;/lst&gt;</span><br><span class="line">&lt;/requestHandler&gt;</span><br></pre></td></tr></table></figure>
+<ol start="11">
+<li>重启solr容器</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker restart 45b022b95c71</span><br></pre></td></tr></table></figure>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/08/29/SpringBoot-集成-ElasticSearch6-3-2/" itemprop="url">
-              
-                <span itemprop="name">SpringBoot 集成 ElasticSearch6.3.2</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-29T15:00:10+08:00"
-              content="2018-08-29" >
-          08-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/08/29/Elasticsearch6-3-2及其head插件安装/" itemprop="url">
-              
-                <span itemprop="name">Elasticsearch6.3.2及其head插件安装</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-29T14:50:21+08:00"
-              content="2018-08-29" >
-          08-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/08/29/hexo-github搭建博客常用的命令/" itemprop="url">
-              
-                <span itemprop="name">hexo github搭建博客常用的命令</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-29T10:31:15+08:00"
-              content="2018-08-29" >
-          08-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/08/28/Nginx负载均衡详解/" itemprop="url">
-              
-                <span itemprop="name">Nginx负载均衡详解</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-28T20:27:23+08:00"
-              content="2018-08-28" >
-          08-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/08/28/SpringBoot2-X新特性/" itemprop="url">
-              
-                <span itemprop="name">SpringBoot2.X新特性</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-28T18:57:24+08:00"
-              content="2018-08-28" >
-          08-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/08/28/My-Blog/" itemprop="url">
-              
-                <span itemprop="name">My Blog</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-28T17:13:38+08:00"
-              content="2018-08-28" >
-          08-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="珈蓝城下&7 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="珈蓝城下&7 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Docker/" rel="tag"> <i class="fa fa-tag"></i> Docker</a>
+          
+            <a href="/tags/Solr/" rel="tag"> <i class="fa fa-tag"></i> Solr</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/29/SpringBoot集成Memcached/" rel="next" title="SpringBoot集成Memcached">
+                <i class="fa fa-chevron-left"></i> SpringBoot集成Memcached
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/30/SpringBoot集成Solr-1/" rel="prev" title="SpringBoot集成Solr">
+                SpringBoot集成Solr <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+	
+	<div>
+    
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------ 本文结束------</div>
+    
+</div>
+    
+	</div>
+	
   </div>
   
   
   
-
   
+  
+  
+  </article>
 
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -656,6 +589,17 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zOTM1OS8xNTg4Ng=="></div>
+    </div>
+
+  
+  
+
+
+
 
         </div>
         
@@ -932,6 +876,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -960,6 +908,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
