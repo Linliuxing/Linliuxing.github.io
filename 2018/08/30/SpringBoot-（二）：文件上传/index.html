@@ -86,20 +86,18 @@
 
 
 
-<meta name="description" content="新建一个SpringBoot项目：SpringBoot–uploadfile工程目录： pom.xml依赖： 123456789101112131415161718&amp;lt;dependencies&amp;gt;		&amp;lt;dependency&amp;gt;			&amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;			&amp;lt;artifactId&amp;gt">
+<meta name="description" content="新建一个SpringBoot项目：SpringBoot–uploadfile pom.xml依赖：">
 <meta name="keywords" content="SpringBoot">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SpringBoot （二）：文件上传">
 <meta property="og:url" content="http://yoursite.com/2018/08/30/SpringBoot-（二）：文件上传/index.html">
 <meta property="og:site_name" content="皮卡皮卡丘">
-<meta property="og:description" content="新建一个SpringBoot项目：SpringBoot–uploadfile工程目录： pom.xml依赖： 123456789101112131415161718&amp;lt;dependencies&amp;gt;		&amp;lt;dependency&amp;gt;			&amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;			&amp;lt;artifactId&amp;gt">
+<meta property="og:description" content="新建一个SpringBoot项目：SpringBoot–uploadfile pom.xml依赖：">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://img.blog.csdn.net/20170801144146805?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjY2NDE3ODE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2018-08-30T03:55:02.469Z">
+<meta property="og:updated_time" content="2018-08-31T09:57:33.141Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SpringBoot （二）：文件上传">
-<meta name="twitter:description" content="新建一个SpringBoot项目：SpringBoot–uploadfile工程目录： pom.xml依赖： 123456789101112131415161718&amp;lt;dependencies&amp;gt;		&amp;lt;dependency&amp;gt;			&amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;			&amp;lt;artifactId&amp;gt">
-<meta name="twitter:image" content="http://img.blog.csdn.net/20170801144146805?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjY2NDE3ODE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta name="twitter:description" content="新建一个SpringBoot项目：SpringBoot–uploadfile pom.xml依赖：">
 
 
 
@@ -394,7 +392,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  712字
+                  708字
                 </span>
               
 
@@ -431,8 +429,8 @@
       
 
       
-        <p>新建一个SpringBoot项目：SpringBoot–uploadfile<br>工程目录：<br><img src="http://img.blog.csdn.net/20170801144146805?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjY2NDE3ODE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>pom.xml依赖：</p>
+        <p>新建一个SpringBoot项目：SpringBoot–uploadfile</p>
+<p>pom.xml依赖：<a id="more"></a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependencies&gt;</span><br><span class="line">		&lt;dependency&gt;</span><br><span class="line">			&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">			&lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</span><br><span class="line">		&lt;/dependency&gt;</span><br><span class="line">		</span><br><span class="line">		 &lt;!-- thmleaf模板依赖. --&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-boot-starter-thymeleaf&lt;/artifactId&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">		&lt;dependency&gt;</span><br><span class="line">			&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">			&lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;</span><br><span class="line">			&lt;scope&gt;test&lt;/scope&gt;</span><br><span class="line">		&lt;/dependency&gt;</span><br><span class="line">	&lt;/dependencies&gt;</span><br></pre></td></tr></table></figure>
 <p>FileUploadConfiguration文件信息配置：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class FileUploadConfiguration &#123;</span><br><span class="line">	</span><br><span class="line">	@Bean</span><br><span class="line">    public MultipartConfigElement multipartConfigElement() &#123;</span><br><span class="line">        MultipartConfigFactory factory = new MultipartConfigFactory();</span><br><span class="line">        // 设置文件大小限制 ,超出设置页面会抛出异常信息，</span><br><span class="line">        // 这样在文件上传的地方就需要进行异常信息的处理了;</span><br><span class="line">        factory.setMaxFileSize(&quot;256KB&quot;); // KB,MB</span><br><span class="line">        /// 设置总上传数据总大小</span><br><span class="line">        factory.setMaxRequestSize(&quot;512KB&quot;);</span><br><span class="line">        // Sets the directory location where files will be stored.</span><br><span class="line">        // factory.setLocation(&quot;路径地址&quot;);</span><br><span class="line">        return factory.createMultipartConfig();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -442,7 +440,6 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;title&gt;文件上传示例&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;h2&gt;文件上传示例&lt;/h2&gt;</span><br><span class="line">    &lt;hr/&gt;</span><br><span class="line">    &lt;form method=&quot;POST&quot; enctype=&quot;multipart/form-data&quot; action=&quot;/upload&quot;&gt;</span><br><span class="line">        &lt;p&gt;</span><br><span class="line">            文件：&lt;input type=&quot;file&quot; name=&quot;file&quot; /&gt;</span><br><span class="line">        &lt;/p&gt;</span><br><span class="line">        &lt;p&gt;</span><br><span class="line">            &lt;input type=&quot;submit&quot; value=&quot;上传&quot; /&gt;</span><br><span class="line">        &lt;/p&gt;</span><br><span class="line">    &lt;/form&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
 <p>批量文件：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;title&gt;批量文件上传示例&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;h2&gt;批量文件上传示例&lt;/h2&gt;</span><br><span class="line">    &lt;hr/&gt;</span><br><span class="line">    &lt;form method=&quot;POST&quot; enctype=&quot;multipart/form-data&quot;</span><br><span class="line">        action=&quot;/upload/batch&quot;&gt;</span><br><span class="line">        &lt;p&gt;</span><br><span class="line">            文件1：&lt;input type=&quot;file&quot; name=&quot;file&quot; /&gt;</span><br><span class="line">        &lt;/p&gt;</span><br><span class="line">        &lt;p&gt;</span><br><span class="line">            文件2：&lt;input type=&quot;file&quot; name=&quot;file&quot; /&gt;</span><br><span class="line">        &lt;/p&gt;</span><br><span class="line">        &lt;p&gt;</span><br><span class="line">            文件3：&lt;input type=&quot;file&quot; name=&quot;file&quot; /&gt;</span><br><span class="line">        &lt;/p&gt;</span><br><span class="line">        &lt;p&gt;</span><br><span class="line">            &lt;input type=&quot;submit&quot; value=&quot;上传&quot; /&gt;</span><br><span class="line">        &lt;/p&gt;</span><br><span class="line">    &lt;/form&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-
       
     </div>
     
@@ -606,7 +603,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -706,7 +703,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共8.8k字</span>
+  <span class="post-count">博客全站共9.6k字</span>
 </div>
 
         

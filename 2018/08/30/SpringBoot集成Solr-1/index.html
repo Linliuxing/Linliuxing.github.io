@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="添加springboot集成solr的依赖  1234      &amp;lt;dependency&amp;gt;	&amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;	&amp;lt;artifactId&amp;gt;spring-boot-starter-data-solr&amp;lt;/artifactId&amp;gt;&amp;lt;/dependency&amp;gt;  appl">
+<meta name="description" content="添加springboot集成solr的依赖">
 <meta name="keywords" content="SpringBoot">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SpringBoot集成Solr">
 <meta property="og:url" content="http://yoursite.com/2018/08/30/SpringBoot集成Solr-1/index.html">
 <meta property="og:site_name" content="皮卡皮卡丘">
-<meta property="og:description" content="添加springboot集成solr的依赖  1234      &amp;lt;dependency&amp;gt;	&amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;	&amp;lt;artifactId&amp;gt;spring-boot-starter-data-solr&amp;lt;/artifactId&amp;gt;&amp;lt;/dependency&amp;gt;  appl">
+<meta property="og:description" content="添加springboot集成solr的依赖">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-30T03:29:20.013Z">
+<meta property="og:updated_time" content="2018-08-31T09:58:28.933Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SpringBoot集成Solr">
-<meta name="twitter:description" content="添加springboot集成solr的依赖  1234      &amp;lt;dependency&amp;gt;	&amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;	&amp;lt;artifactId&amp;gt;spring-boot-starter-data-solr&amp;lt;/artifactId&amp;gt;&amp;lt;/dependency&amp;gt;  appl">
+<meta name="twitter:description" content="添加springboot集成solr的依赖">
 
 
 
@@ -430,7 +430,7 @@
 
       
         <ol>
-<li>添加springboot集成solr的依赖</li>
+<li>添加springboot集成solr的依赖<a id="more"></a></li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">      &lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;spring-boot-starter-data-solr&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
 <ol start="2">
@@ -445,7 +445,6 @@
 <li>测试查询（增加了高亮显示）</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">@Test</span><br><span class="line">	public void test() throws IOException, SolrServerException &#123;</span><br><span class="line"></span><br><span class="line">		SolrQuery solrQuery = new SolrQuery();</span><br><span class="line">		solrQuery.set(&quot;q&quot;, &quot;title:*&quot;);</span><br><span class="line">		solrQuery.set(&quot;start&quot;, 0);</span><br><span class="line">		solrQuery.set(&quot;rows&quot;, 20);</span><br><span class="line"></span><br><span class="line">		//======高亮设置===</span><br><span class="line">		//开启高亮</span><br><span class="line">		solrQuery.setHighlight(true);</span><br><span class="line">		//高亮域</span><br><span class="line">		solrQuery.addHighlightField(&quot;title&quot;);</span><br><span class="line">		//前缀</span><br><span class="line">		solrQuery.setHighlightSimplePre(&quot;&lt;span style=&apos;color:red&apos;&gt;&quot;);</span><br><span class="line">		//后缀</span><br><span class="line">		solrQuery.setHighlightSimplePost(&quot;&lt;/span&gt;&quot;);</span><br><span class="line"></span><br><span class="line">		QueryResponse response = solrClient.query(solrQuery);</span><br><span class="line">		SolrDocumentList results = response.getResults();</span><br><span class="line"></span><br><span class="line">		System.out.println(&quot;查询内容:&quot; + solrQuery);</span><br><span class="line">		System.out.println(&quot;文档数量：&quot; + results.getNumFound());</span><br><span class="line">		System.out.println(&quot;查询花费时间:&quot; + response.getQTime());</span><br><span class="line"></span><br><span class="line">		//获取高亮信息</span><br><span class="line">		Map&lt;String, Map&lt;String, List&lt;String&gt;&gt;&gt; highlighting = response.getHighlighting();</span><br><span class="line"></span><br><span class="line">		for (SolrDocument solrDocument :results) &#123;</span><br><span class="line">			System.out.println(solrDocument);</span><br><span class="line">			System.out.println(solrDocument.getFieldValue(&quot;cover&quot;));</span><br><span class="line">			System.out.println(solrDocument.getFieldValue(&quot;service_area&quot;));</span><br><span class="line"></span><br><span class="line">			//输出高亮</span><br><span class="line">			Map&lt;String, List&lt;String&gt;&gt; map = highlighting.get(solrDocument.get(&quot;id&quot;));</span><br><span class="line">			List&lt;String&gt; list = map.get(&quot;title&quot;);</span><br><span class="line">			if(list != null &amp;&amp; list.size() &gt; 0)&#123;</span><br><span class="line">				System.out.println(list.get(0));</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
       
     </div>
     
@@ -609,7 +608,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -709,7 +708,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共8.8k字</span>
+  <span class="post-count">博客全站共9.6k字</span>
 </div>
 
         
