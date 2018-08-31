@@ -86,18 +86,21 @@
 
 
 
-<meta name="description" content="添加springboot集成solr的依赖  1234      &amp;lt;dependency&amp;gt;	&amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;	&amp;lt;artifactId&amp;gt;spring-boot-starter-data-solr&amp;lt;/artifactId&amp;gt;&amp;lt;/dependency&amp;gt;  appl">
+<meta name="description" content="SpringBoot有自己的日志框架，比如 SLF4J和logback，今天不使用他们两个。今天就结合Spring框架学习的AOP搞一个自定义日志记录。  首先加入AOP依赖： 1234&amp;lt;dependency&amp;gt;	&amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;	&amp;lt;artifactId&amp;gt;spring-boot-s">
 <meta name="keywords" content="SpringBoot">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SpringBoot集成Solr">
-<meta property="og:url" content="http://yoursite.com/2018/08/30/SpringBoot集成Solr-1/index.html">
+<meta property="og:title" content="SpringBoot之日志AOP">
+<meta property="og:url" content="http://yoursite.com/2018/08/31/SpringBoot之日志AOP/index.html">
 <meta property="og:site_name" content="皮卡皮卡丘">
-<meta property="og:description" content="添加springboot集成solr的依赖  1234      &amp;lt;dependency&amp;gt;	&amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;	&amp;lt;artifactId&amp;gt;spring-boot-starter-data-solr&amp;lt;/artifactId&amp;gt;&amp;lt;/dependency&amp;gt;  appl">
+<meta property="og:description" content="SpringBoot有自己的日志框架，比如 SLF4J和logback，今天不使用他们两个。今天就结合Spring框架学习的AOP搞一个自定义日志记录。  首先加入AOP依赖： 1234&amp;lt;dependency&amp;gt;	&amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;	&amp;lt;artifactId&amp;gt;spring-boot-s">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-30T03:29:20.013Z">
+<meta property="og:image" content="https://img-blog.csdn.net/20180529100502365?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI2NjQxNzgx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:image" content="https://img-blog.csdn.net/20180529100757648?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI2NjQxNzgx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:updated_time" content="2018-08-31T03:26:23.606Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SpringBoot集成Solr">
-<meta name="twitter:description" content="添加springboot集成solr的依赖  1234      &amp;lt;dependency&amp;gt;	&amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;	&amp;lt;artifactId&amp;gt;spring-boot-starter-data-solr&amp;lt;/artifactId&amp;gt;&amp;lt;/dependency&amp;gt;  appl">
+<meta name="twitter:title" content="SpringBoot之日志AOP">
+<meta name="twitter:description" content="SpringBoot有自己的日志框架，比如 SLF4J和logback，今天不使用他们两个。今天就结合Spring框架学习的AOP搞一个自定义日志记录。  首先加入AOP依赖： 1234&amp;lt;dependency&amp;gt;	&amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;	&amp;lt;artifactId&amp;gt;spring-boot-s">
+<meta name="twitter:image" content="https://img-blog.csdn.net/20180529100502365?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI2NjQxNzgx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
 
 
 
@@ -127,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/08/30/SpringBoot集成Solr-1/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/31/SpringBoot之日志AOP/"/>
 
 
 
 
 
-  <title>SpringBoot集成Solr | 皮卡皮卡丘</title>
+  <title>SpringBoot之日志AOP | 皮卡皮卡丘</title>
   
 
 
@@ -304,7 +307,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/30/SpringBoot集成Solr-1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/31/SpringBoot之日志AOP/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="珈蓝城下&7">
@@ -321,7 +324,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">SpringBoot集成Solr</h1>
+          <h1 class="post-title" itemprop="name headline">SpringBoot之日志AOP</h1>
         
 
         <div class="post-meta">
@@ -333,8 +336,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-30T11:28:00+08:00">
-                2018-08-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-31T11:25:00+08:00">
+                2018-08-31
               </time>
             
 
@@ -343,28 +346,6 @@
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/SpringBoot/" itemprop="url" rel="index">
-                    <span itemprop="name">SpringBoot</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -392,7 +373,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  480字
+                  417字
                 </span>
               
 
@@ -408,7 +389,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3分钟
+                  2分钟
                 </span>
               
             </div>
@@ -429,22 +410,16 @@
       
 
       
-        <ol>
-<li>添加springboot集成solr的依赖</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">      &lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;spring-boot-starter-data-solr&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>application.yml指向solr地址</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">spring:</span><br><span class="line">  data:</span><br><span class="line">    solr:</span><br><span class="line">      host: http://192.168.0.197:8983/solr/ik_core</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>添加solr实时更新操作</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">@SpringBootApplication</span><br><span class="line">@EnableScheduling</span><br><span class="line">public class SpringbootSolrApplication &#123;</span><br><span class="line"></span><br><span class="line">	private Logger logger = LoggerFactory.getLogger(this.getClass());</span><br><span class="line"></span><br><span class="line">	@Autowired</span><br><span class="line">	private RestTemplateBuilder builder;</span><br><span class="line"></span><br><span class="line">	@Autowired</span><br><span class="line">	private RestTemplate restTemplate;</span><br><span class="line"></span><br><span class="line">	// 使用RestTemplateBuilder来实例化RestTemplate对象，spring默认已经注入了RestTemplateBuilder实例</span><br><span class="line">	@Bean</span><br><span class="line">	public RestTemplate restTemplate() &#123;</span><br><span class="line">		return builder.build();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		SpringApplication.run(SpringbootSolrApplication.class, args);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	//每五秒执行一次</span><br><span class="line">	@Scheduled(cron = &quot;0/5 * * * * *&quot;)</span><br><span class="line">	public void updateSolr() &#123;</span><br><span class="line">		MultiValueMap&lt;String, Object&gt; postParameters = new LinkedMultiValueMap&lt;&gt;();</span><br><span class="line">		postParameters.add(&quot;command&quot;, &quot;full-import&quot;);</span><br><span class="line">		postParameters.add(&quot;verbose&quot;, &quot;false&quot;);</span><br><span class="line">		postParameters.add(&quot;clean&quot;, &quot;true&quot;);</span><br><span class="line">		postParameters.add(&quot;commit&quot;, &quot;true&quot;);</span><br><span class="line">		postParameters.add(&quot;core&quot;, &quot;ik_core&quot;);</span><br><span class="line">		postParameters.add(&quot;name&quot;, &quot;dataimport&quot;);</span><br><span class="line">		HttpHeaders headers = new HttpHeaders();</span><br><span class="line">		headers.add(&quot;Content-Type&quot;, &quot;application/x-www-form-urlencoded&quot;);</span><br><span class="line">		HttpEntity &lt;MultiValueMap &lt;String, Object&gt;&gt; r = new HttpEntity&lt;&gt;(postParameters, headers);</span><br><span class="line">		String time = String.valueOf(new Date().getTime());</span><br><span class="line">		String url = &quot;http://192.168.0.197:8983/solr/ik_core/dataimport?_=&quot; + time + &quot;&amp;indent=on&amp;wt=json&quot;;</span><br><span class="line">		String responseMessage = restTemplate.postForObject(url, r, String.class);</span><br><span class="line"></span><br><span class="line">		logger.info(&quot;更新solr索引：返回值：&#123;&#125;&quot;, responseMessage);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>测试查询（增加了高亮显示）</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">@Test</span><br><span class="line">	public void test() throws IOException, SolrServerException &#123;</span><br><span class="line"></span><br><span class="line">		SolrQuery solrQuery = new SolrQuery();</span><br><span class="line">		solrQuery.set(&quot;q&quot;, &quot;title:*&quot;);</span><br><span class="line">		solrQuery.set(&quot;start&quot;, 0);</span><br><span class="line">		solrQuery.set(&quot;rows&quot;, 20);</span><br><span class="line"></span><br><span class="line">		//======高亮设置===</span><br><span class="line">		//开启高亮</span><br><span class="line">		solrQuery.setHighlight(true);</span><br><span class="line">		//高亮域</span><br><span class="line">		solrQuery.addHighlightField(&quot;title&quot;);</span><br><span class="line">		//前缀</span><br><span class="line">		solrQuery.setHighlightSimplePre(&quot;&lt;span style=&apos;color:red&apos;&gt;&quot;);</span><br><span class="line">		//后缀</span><br><span class="line">		solrQuery.setHighlightSimplePost(&quot;&lt;/span&gt;&quot;);</span><br><span class="line"></span><br><span class="line">		QueryResponse response = solrClient.query(solrQuery);</span><br><span class="line">		SolrDocumentList results = response.getResults();</span><br><span class="line"></span><br><span class="line">		System.out.println(&quot;查询内容:&quot; + solrQuery);</span><br><span class="line">		System.out.println(&quot;文档数量：&quot; + results.getNumFound());</span><br><span class="line">		System.out.println(&quot;查询花费时间:&quot; + response.getQTime());</span><br><span class="line"></span><br><span class="line">		//获取高亮信息</span><br><span class="line">		Map&lt;String, Map&lt;String, List&lt;String&gt;&gt;&gt; highlighting = response.getHighlighting();</span><br><span class="line"></span><br><span class="line">		for (SolrDocument solrDocument :results) &#123;</span><br><span class="line">			System.out.println(solrDocument);</span><br><span class="line">			System.out.println(solrDocument.getFieldValue(&quot;cover&quot;));</span><br><span class="line">			System.out.println(solrDocument.getFieldValue(&quot;service_area&quot;));</span><br><span class="line"></span><br><span class="line">			//输出高亮</span><br><span class="line">			Map&lt;String, List&lt;String&gt;&gt; map = highlighting.get(solrDocument.get(&quot;id&quot;));</span><br><span class="line">			List&lt;String&gt; list = map.get(&quot;title&quot;);</span><br><span class="line">			if(list != null &amp;&amp; list.size() &gt; 0)&#123;</span><br><span class="line">				System.out.println(list.get(0));</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+        <p> SpringBoot有自己的日志框架，比如 SLF4J和logback，今天不使用他们两个。今天就结合Spring框架学习的AOP搞一个自定义日志记录。</p>
+<p> <strong>首先加入AOP依赖：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;spring-boot-starter-aop&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>定义一个注解@：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import java.lang.annotation.*;</span><br><span class="line"></span><br><span class="line">@Target(&#123;ElementType.PARAMETER, ElementType.METHOD&#125;)</span><br><span class="line">@Retention(RetentionPolicy.RUNTIME)</span><br><span class="line">@Documented</span><br><span class="line">public @interface SysLog &#123;</span><br><span class="line">    /** 要执行的操作类型比如：add操作 **/</span><br><span class="line">    String value() default &quot;&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>编写一个Aspect类，使用@sysLog在Controller层的每一个方法前注入，然后根据我们的日志需求编写相应的代码，并可以通过Service把日志保存在数据库中：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">@Aspect</span><br><span class="line">@Component</span><br><span class="line">public class SysLogAspect &#123;</span><br><span class="line"></span><br><span class="line">    private  static  final Logger logger = LoggerFactory.getLogger(SysLogAspect.class);</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private LogService logService;</span><br><span class="line"></span><br><span class="line">    //Controller层切点</span><br><span class="line">    @Pointcut(&quot;execution (* com.***.***.controller..*.*(..))&quot;)</span><br><span class="line">    public  void controllerAspect() &#123;&#125;</span><br><span class="line"></span><br><span class="line">    @After(&quot;@annotation(sysLog)&quot;) </span><br><span class="line">    public void doBefore(JoinPoint joinPoint,SysLog sysLog) &#123;</span><br><span class="line">        String id = StringUtils.getUUID();</span><br><span class="line">        //获取注解里的值</span><br><span class="line">        String operation =  sysLog.value();</span><br><span class="line"></span><br><span class="line">        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();</span><br><span class="line">        HttpSession session = request.getSession();</span><br><span class="line">        String loginName = (String) session.getAttribute(&quot;loginName&quot;);</span><br><span class="line"></span><br><span class="line">        String ip = request.getRemoteHost();</span><br><span class="line">        String url = request.getRequestURL().toString();</span><br><span class="line">        String method = request.getMethod();</span><br><span class="line">        String targetName = joinPoint.getTarget().getClass().getName();</span><br><span class="line">        String methodName = joinPoint.getSignature().getName();</span><br><span class="line">        String date = DateUtils.getYearDate();</span><br><span class="line"></span><br><span class="line">        Log log = new Log();</span><br><span class="line"></span><br><span class="line">        log.setId(id);</span><br><span class="line">        log.setLoginname(loginName);//用户名</span><br><span class="line">        log.setIp(ip);//请求ip</span><br><span class="line">        log.setUrl(url);//请求url</span><br><span class="line">        log.setMethod(method);//请求方式</span><br><span class="line">        log.setOperation(operation);//执行的操作</span><br><span class="line">        log.setTargetName(targetName);//请求的Controller</span><br><span class="line">        log.setMethodName(methodName);//请求的方法</span><br><span class="line">        log.setDate(date);//请求时间</span><br><span class="line"></span><br><span class="line">        int result =  logService.insert(log);</span><br><span class="line">        if(result == 1 )&#123;</span><br><span class="line">            logger.info(&quot;新增一条日志记录：&quot;+log.toString());</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            logger.error(&quot;新增日志记录失败！！！&quot;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>@SysLog注解方法：</strong></p>
+<p><img src="https://img-blog.csdn.net/20180529100502365?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI2NjQxNzgx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"></p>
+<p><strong>效果：</strong><br><img src="https://img-blog.csdn.net/20180529100757648?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI2NjQxNzgx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"></p>
 
       
     </div>
@@ -504,8 +479,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/30/Docker-Solr-IK/" rel="next" title="Docker+Solr+IK">
-                <i class="fa fa-chevron-left"></i> Docker+Solr+IK
+              <a href="/2018/08/31/MyCat-知识/" rel="next" title="MyCat 知识">
+                <i class="fa fa-chevron-left"></i> MyCat 知识
               </a>
             
           </div>
@@ -514,8 +489,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/08/30/SpringBoot-（二）：文件上传/" rel="prev" title="SpringBoot （二）：文件上传">
-                SpringBoot （二）：文件上传 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/08/31/SpringBoot整合SpringBatch/" rel="prev" title="SpringBoot整合SpringBatch">
+                SpringBoot整合SpringBatch <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
