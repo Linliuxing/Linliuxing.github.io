@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="SpringBoot," />
 
 
 
@@ -86,13 +86,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="皮卡皮卡丘">
-<meta property="og:url" content="http://yoursite.com/categories/SpringBoot/Mycat/index.html">
+<meta name="description" content="Kafka简介Apache Kafka是分布式发布-订阅消息系统。它最初由LinkedIn公司开发，之后成为Apache项目的一部分。Kafka是一种快速、可扩展的、设计内在就是分布式的，分区的和可复制的提交日志服务。 Apache Kafka与传统消息系统相比，有以下不同：  它被设计为一个分布式系统，易于向外扩展； 它同时为发布和订阅提供高吞吐量； 它支持多订阅者，当失败时能自动平衡消费者；">
+<meta name="keywords" content="SpringBoot">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SpringBoot集成Kafka">
+<meta property="og:url" content="http://yoursite.com/2018/09/07/SpringBoot集成Kafka/index.html">
 <meta property="og:site_name" content="皮卡皮卡丘">
+<meta property="og:description" content="Kafka简介Apache Kafka是分布式发布-订阅消息系统。它最初由LinkedIn公司开发，之后成为Apache项目的一部分。Kafka是一种快速、可扩展的、设计内在就是分布式的，分区的和可复制的提交日志服务。 Apache Kafka与传统消息系统相比，有以下不同：  它被设计为一个分布式系统，易于向外扩展； 它同时为发布和订阅提供高吞吐量； 它支持多订阅者，当失败时能自动平衡消费者；">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-09-07T08:42:50.410Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="皮卡皮卡丘">
+<meta name="twitter:title" content="SpringBoot集成Kafka">
+<meta name="twitter:description" content="Kafka简介Apache Kafka是分布式发布-订阅消息系统。它最初由LinkedIn公司开发，之后成为Apache项目的一部分。Kafka是一种快速、可扩展的、设计内在就是分布式的，分区的和可复制的提交日志服务。 Apache Kafka与传统消息系统相比，有以下不同：  它被设计为一个分布式系统，易于向外扩展； 它同时为发布和订阅提供高吞吐量； 它支持多订阅者，当失败时能自动平衡消费者；">
 
 
 
@@ -122,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/SpringBoot/Mycat/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/07/SpringBoot集成Kafka/"/>
 
 
 
 
 
-  <title>分类: Mycat | 皮卡皮卡丘</title>
+  <title>SpringBoot集成Kafka | 皮卡皮卡丘</title>
   
 
 
@@ -147,7 +152,7 @@
     
   
 
-  <div class="container sidebar-position-right ">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>	
 	
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -285,55 +290,313 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Mycat<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/SpringBoot集成Kafka/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="珈蓝城下&7">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/pikaqiu.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="皮卡皮卡丘">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/09/07/springboot-mycat-mybatis-plus/" itemprop="url">
-              
-                <span itemprop="name">springboot-mycat-mybatis-plus</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">SpringBoot集成Kafka</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-09-07T15:14:00+08:00"
-              content="2018-09-07" >
-          09-07
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-07T16:42:00+08:00">
+                2018-09-07
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/SpringBoot/" itemprop="url" rel="index">
+                    <span itemprop="name">SpringBoot</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-eye"></i>浏览
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  437字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Kafka简介"><a href="#Kafka简介" class="headerlink" title="Kafka简介"></a>Kafka简介</h3><p>Apache Kafka是分布式发布-订阅消息系统。它最初由LinkedIn公司开发，之后成为Apache项目的一部分。Kafka是一种快速、可扩展的、设计内在就是分布式的，分区的和可复制的提交日志服务。</p>
+<p>Apache Kafka与传统消息系统相比，有以下不同：</p>
+<ol>
+<li>它被设计为一个分布式系统，易于向外扩展；</li>
+<li>它同时为发布和订阅提供高吞吐量；</li>
+<li>它支持多订阅者，当失败时能自动平衡消费者；</li>
+<li>它将消息持久化到磁盘，因此可用于批量消费，例如ETL，以及实时应用程序。</li>
+</ol>
+<h3 id="SpringBoot集成Kafka"><a href="#SpringBoot集成Kafka" class="headerlink" title="SpringBoot集成Kafka"></a>SpringBoot集成Kafka</h3><ol>
+<li>修改config/server.properties文件，在很靠前的位置有listeners和 advertised.listeners两处配置的注释，去掉这两个注释，并且根据当前服务器的IP修改如下：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">listeners=PLAINTEXT://ip:9092  #当前服务器的IP</span><br><span class="line">advertised.listeners=PLAINTEXT://ip:9092 #当前服务器的IP</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>pom文件 </li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">      &lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.springframework.kafka&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;spring-kafka&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>application.yml</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">spring:</span><br><span class="line">  kafka:</span><br><span class="line">    bootstrap-servers: 192.168.0.197:9092</span><br><span class="line">    producer:</span><br><span class="line">      key-serializer: org.apache.kafka.common.serialization.StringSerializer</span><br><span class="line">      value-serializer: org.apache.kafka.common.serialization.StringSerializer</span><br><span class="line">    consumer:</span><br><span class="line">      group-id: test</span><br><span class="line">      enable-auto-commit: true</span><br><span class="line">      auto-commit-interval: 1000</span><br><span class="line">      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer</span><br><span class="line">      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>KafkaProducerController</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">@RestController</span><br><span class="line">@RequestMapping(&quot;/kafka&quot;)</span><br><span class="line">public class KafkaProducerController &#123;</span><br><span class="line">    private Logger logger = LoggerFactory.getLogger(this.getClass());</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private KafkaTemplate kafkaTemplate;</span><br><span class="line"></span><br><span class="line">    @RequestMapping(&quot;send&quot;)</span><br><span class="line">    public String send(String msg)&#123;</span><br><span class="line">        logger.info(&quot;生产者生产的消息：&quot;+msg);</span><br><span class="line">        kafkaTemplate.send(&quot;test_topic&quot;, msg);</span><br><span class="line">        return &quot;success&quot;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>TestConsumer</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@Component</span><br><span class="line">public class TestConsumer &#123;</span><br><span class="line"></span><br><span class="line">    @KafkaListener(topics = &quot;test_topic&quot;)</span><br><span class="line">    public void listen (ConsumerRecord&lt;?, ?&gt; record) throws Exception &#123;</span><br><span class="line">        System.out.printf(&quot;topic = %s, offset = %d, value = %s \n&quot;, record.topic(), record.offset(), record.value());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="珈蓝城下&7 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="珈蓝城下&7 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/SpringBoot/" rel="tag"> <i class="fa fa-tag"></i> SpringBoot</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/09/07/线程间协作的两种方式：wait、notify、notifyAll和Condition/" rel="next" title="线程间协作的两种方式：wait、notify、notifyAll和Condition">
+                <i class="fa fa-chevron-left"></i> 线程间协作的两种方式：wait、notify、notifyAll和Condition
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+	
+	<div>
+    
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------ 本文结束------</div>
+    
+</div>
+    
+	</div>
+	
   </div>
   
   
   
-
   
+  
+  
+  </article>
 
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -341,6 +604,17 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zOTM1OS8xNTg4Ng=="></div>
+    </div>
+
+  
+  
+
+
+
 
         </div>
         
@@ -361,8 +635,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -442,6 +725,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Kafka简介"><span class="nav-number">1.</span> <span class="nav-text">Kafka简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SpringBoot集成Kafka"><span class="nav-number">2.</span> <span class="nav-text">SpringBoot集成Kafka</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -617,6 +916,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -645,6 +948,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 

@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[SpringBoot集成Kafka]]></title>
+    <url>%2F2018%2F09%2F07%2FSpringBoot%E9%9B%86%E6%88%90Kafka%2F</url>
+    <content type="text"><![CDATA[Kafka简介Apache Kafka是分布式发布-订阅消息系统。它最初由LinkedIn公司开发，之后成为Apache项目的一部分。Kafka是一种快速、可扩展的、设计内在就是分布式的，分区的和可复制的提交日志服务。 Apache Kafka与传统消息系统相比，有以下不同： 它被设计为一个分布式系统，易于向外扩展； 它同时为发布和订阅提供高吞吐量； 它支持多订阅者，当失败时能自动平衡消费者； 它将消息持久化到磁盘，因此可用于批量消费，例如ETL，以及实时应用程序。 SpringBoot集成Kafka 修改config/server.properties文件，在很靠前的位置有listeners和 advertised.listeners两处配置的注释，去掉这两个注释，并且根据当前服务器的IP修改如下： 12listeners=PLAINTEXT://ip:9092 #当前服务器的IPadvertised.listeners=PLAINTEXT://ip:9092 #当前服务器的IP pom文件 1234 &lt;dependency&gt; &lt;groupId&gt;org.springframework.kafka&lt;/groupId&gt; &lt;artifactId&gt;spring-kafka&lt;/artifactId&gt;&lt;/dependency&gt; application.yml 123456789101112spring: kafka: bootstrap-servers: 192.168.0.197:9092 producer: key-serializer: org.apache.kafka.common.serialization.StringSerializer value-serializer: org.apache.kafka.common.serialization.StringSerializer consumer: group-id: test enable-auto-commit: true auto-commit-interval: 1000 key-deserializer: org.apache.kafka.common.serialization.StringDeserializer value-deserializer: org.apache.kafka.common.serialization.StringDeserializer KafkaProducerController 12345678910111213141516@RestController@RequestMapping(&quot;/kafka&quot;)public class KafkaProducerController &#123; private Logger logger = LoggerFactory.getLogger(this.getClass()); @Autowired private KafkaTemplate kafkaTemplate; @RequestMapping(&quot;send&quot;) public String send(String msg)&#123; logger.info(&quot;生产者生产的消息：&quot;+msg); kafkaTemplate.send(&quot;test_topic&quot;, msg); return &quot;success&quot;; &#125;&#125; TestConsumer 12345678@Componentpublic class TestConsumer &#123; @KafkaListener(topics = &quot;test_topic&quot;) public void listen (ConsumerRecord&lt;?, ?&gt; record) throws Exception &#123; System.out.printf(&quot;topic = %s, offset = %d, value = %s \n&quot;, record.topic(), record.offset(), record.value()); &#125;&#125;]]></content>
+      <categories>
+        <category>SpringBoot</category>
+      </categories>
+      <tags>
+        <tag>SpringBoot</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[线程间协作的两种方式：wait、notify、notifyAll和Condition]]></title>
     <url>%2F2018%2F09%2F07%2F%E7%BA%BF%E7%A8%8B%E9%97%B4%E5%8D%8F%E4%BD%9C%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F%EF%BC%9Await%E3%80%81notify%E3%80%81notifyAll%E5%92%8CCondition%2F</url>
     <content type="text"><![CDATA[一.wait()、notify()和notifyAll() wait()、notify()和notifyAll()方法是本地方法，并且为final方法，无法被重写。 调用某个对象的wait()方法能让当前线程阻塞，并且当前线程必须拥有此对象的monitor（即锁） 调用某个对象的notify()方法能够唤醒一个正在等待这个对象的monitor的线程，如果有多个线程都在等待这个对象的monitor，则只能唤醒其中一个线程； 调用notifyAll()方法能够唤醒所有正在等待这个对象的monitor的线程； 二.Condition Condition是在java 1.5中才出现的，它用来替代传统的Object的wait()、notify()实现线程间的协作，相比使用Object的wait()、notify()，使用Condition1的await()、signal()这种方式实现线程间协作更加安全和高效。因此通常来说比较推荐使用Condition，在阻塞队列那一篇博文中就讲述到了，阻塞队列实际上是使用了Condition来模拟线程间协作。 Condition是个接口，基本的方法就是await()和signal()方法； Condition依赖于Lock接口，生成一个Condition的基本代码是lock.newCondition() 调用Condition的await()和signal()方法，都必须在lock保护之内，就是说必须在lock.lock()和lock.unlock之间才可以使用 12345Conditon中的await()对应Object的wait()； Condition中的signal()对应Object的notify()； Condition中的signalAll()对应Object的notifyAll()。]]></content>
