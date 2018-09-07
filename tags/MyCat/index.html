@@ -88,7 +88,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="皮卡皮卡丘">
-<meta property="og:url" content="http://yoursite.com/tags/MyCat/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/Mycat/index.html">
 <meta property="og:site_name" content="皮卡皮卡丘">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/MyCat/"/>
+  <link rel="canonical" href="http://yoursite.com/tags/Mycat/"/>
 
 
 
 
 
-  <title>标签: MyCat | 皮卡皮卡丘</title>
+  <title>标签: Mycat | 皮卡皮卡丘</title>
   
 
 
@@ -292,7 +292,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>MyCat<small>标签</small>
+        <h1>Mycat<small>标签</small>
         </h1>
       </div>
 
@@ -304,37 +304,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2018/08/31/SpringBoot-MyCat-Mybatis/" itemprop="url">
+            <a class="post-title-link" href="/2018/09/07/springboot-mycat-mybatis-plus/" itemprop="url">
               
-                <span itemprop="name">SpringBoot+MyCat+Mybatis</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-31T17:44:00+08:00"
-              content="2018-08-31" >
-          08-31
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/08/31/MyCat-知识/" itemprop="url">
-              
-                <span itemprop="name">MyCat 知识</span>
+                <span itemprop="name">springboot-mycat-mybatis-plus</span>
               
             </a>
         
@@ -342,9 +314,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-31T11:23:00+08:00"
-              content="2018-08-31" >
-          08-31
+              datetime="2018-09-07T15:14:00+08:00"
+              content="2018-09-07" >
+          09-07
         </time>
       </div>
 
@@ -408,7 +380,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -419,7 +391,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -430,7 +402,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -508,7 +480,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共12.2k字</span>
+  <span class="post-count">博客全站共13.8k字</span>
 </div>
 
         
@@ -983,6 +955,49 @@
 
     // handle and trigger popup window;
     $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
+opup-trigger').click(function(e) {
       e.stopPropagation();
       if (isfetched === false) {
         searchFunc(path, 'local-search-input', 'local-search-result');

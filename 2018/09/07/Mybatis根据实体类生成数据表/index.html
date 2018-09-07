@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="SpringBoot," />
+  <meta name="keywords" content="Mybatis," />
 
 
 
@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="新建一个SpringBoot项目：SpringBoot–uploadfile pom.xml依赖：">
-<meta name="keywords" content="SpringBoot">
+<meta name="description" content="pom坐标">
+<meta name="keywords" content="Mybatis">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SpringBoot （二）：文件上传">
-<meta property="og:url" content="http://yoursite.com/2018/08/30/SpringBoot-（二）：文件上传/index.html">
+<meta property="og:title" content="Mybatis根据实体类生成数据表">
+<meta property="og:url" content="http://yoursite.com/2018/09/07/Mybatis根据实体类生成数据表/index.html">
 <meta property="og:site_name" content="皮卡皮卡丘">
-<meta property="og:description" content="新建一个SpringBoot项目：SpringBoot–uploadfile pom.xml依赖：">
+<meta property="og:description" content="pom坐标">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-31T09:57:33.141Z">
+<meta property="og:updated_time" content="2018-09-07T07:13:36.536Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SpringBoot （二）：文件上传">
-<meta name="twitter:description" content="新建一个SpringBoot项目：SpringBoot–uploadfile pom.xml依赖：">
+<meta name="twitter:title" content="Mybatis根据实体类生成数据表">
+<meta name="twitter:description" content="pom坐标">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/08/30/SpringBoot-（二）：文件上传/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/07/Mybatis根据实体类生成数据表/"/>
 
 
 
 
 
-  <title>SpringBoot （二）：文件上传 | 皮卡皮卡丘</title>
+  <title>Mybatis根据实体类生成数据表 | 皮卡皮卡丘</title>
   
 
 
@@ -304,7 +304,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/30/SpringBoot-（二）：文件上传/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/Mybatis根据实体类生成数据表/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="珈蓝城下&7">
@@ -321,7 +321,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">SpringBoot （二）：文件上传</h1>
+          <h1 class="post-title" itemprop="name headline">Mybatis根据实体类生成数据表</h1>
         
 
         <div class="post-meta">
@@ -333,8 +333,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-30T11:48:00+08:00">
-                2018-08-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-07T15:12:00+08:00">
+                2018-09-07
               </time>
             
 
@@ -343,28 +343,6 @@
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/SpringBoot/" itemprop="url" rel="index">
-                    <span itemprop="name">SpringBoot</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -392,7 +370,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  708字
+                  610字
                 </span>
               
 
@@ -429,17 +407,35 @@
       
 
       
-        <p>新建一个SpringBoot项目：SpringBoot–uploadfile</p>
-<p>pom.xml依赖：<a id="more"></a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependencies&gt;</span><br><span class="line">		&lt;dependency&gt;</span><br><span class="line">			&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">			&lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</span><br><span class="line">		&lt;/dependency&gt;</span><br><span class="line">		</span><br><span class="line">		 &lt;!-- thmleaf模板依赖. --&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-boot-starter-thymeleaf&lt;/artifactId&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">		&lt;dependency&gt;</span><br><span class="line">			&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">			&lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;</span><br><span class="line">			&lt;scope&gt;test&lt;/scope&gt;</span><br><span class="line">		&lt;/dependency&gt;</span><br><span class="line">	&lt;/dependencies&gt;</span><br></pre></td></tr></table></figure>
-<p>FileUploadConfiguration文件信息配置：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class FileUploadConfiguration &#123;</span><br><span class="line">	</span><br><span class="line">	@Bean</span><br><span class="line">    public MultipartConfigElement multipartConfigElement() &#123;</span><br><span class="line">        MultipartConfigFactory factory = new MultipartConfigFactory();</span><br><span class="line">        // 设置文件大小限制 ,超出设置页面会抛出异常信息，</span><br><span class="line">        // 这样在文件上传的地方就需要进行异常信息的处理了;</span><br><span class="line">        factory.setMaxFileSize(&quot;256KB&quot;); // KB,MB</span><br><span class="line">        /// 设置总上传数据总大小</span><br><span class="line">        factory.setMaxRequestSize(&quot;512KB&quot;);</span><br><span class="line">        // Sets the directory location where files will be stored.</span><br><span class="line">        // factory.setLocation(&quot;路径地址&quot;);</span><br><span class="line">        return factory.createMultipartConfig();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>Controller类：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line">@Controller</span><br><span class="line">public class FileUploadController &#123;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	 @RequestMapping(value = &quot;/upload&quot;, method = RequestMethod.GET)</span><br><span class="line">	 public String upload() &#123;</span><br><span class="line">		 return &quot;/fileupload&quot;;</span><br><span class="line">	 &#125;</span><br><span class="line">	 </span><br><span class="line">	 @RequestMapping(value = &quot;/upload/batch&quot;, method = RequestMethod.GET)</span><br><span class="line">	 public String batchUpload() &#123;</span><br><span class="line">		 return &quot;/mutifileupload&quot;;</span><br><span class="line">	 &#125;</span><br><span class="line">	    </span><br><span class="line">	    @RequestMapping(value = &quot;/upload&quot;, method = RequestMethod.POST)</span><br><span class="line">	    @ResponseBody</span><br><span class="line">	    public String upload(@RequestParam(&quot;file&quot;) MultipartFile file) &#123;</span><br><span class="line">	        if (!file.isEmpty()) &#123;</span><br><span class="line">	            try &#123;</span><br><span class="line">	                // 这里只是简单例子，文件直接输出到项目路径下。</span><br><span class="line">	                // 实际项目中，文件需要输出到指定位置，需要在增加代码处理。</span><br><span class="line">	                // 还有关于文件格式限制、文件大小限制，详见：中配置。</span><br><span class="line">	                BufferedOutputStream out = new BufferedOutputStream(</span><br><span class="line">	                        new FileOutputStream(new File(file.getOriginalFilename())));</span><br><span class="line">	                out.write(file.getBytes());</span><br><span class="line">	                out.flush();</span><br><span class="line">	                out.close();</span><br><span class="line">	            &#125; catch (FileNotFoundException e) &#123;</span><br><span class="line">	                e.printStackTrace();</span><br><span class="line">	                return &quot;上传失败,&quot; + e.getMessage();</span><br><span class="line">	            &#125; catch (IOException e) &#123;</span><br><span class="line">	                e.printStackTrace();</span><br><span class="line">	                return &quot;上传失败,&quot; + e.getMessage();</span><br><span class="line">	            &#125;</span><br><span class="line">	            return &quot;上传成功&quot;;</span><br><span class="line">	        &#125; else &#123;</span><br><span class="line">	            return &quot;上传失败，因为文件是空的.&quot;;</span><br><span class="line">	        &#125;</span><br><span class="line">	    &#125;</span><br><span class="line"></span><br><span class="line">	    /**</span><br><span class="line">	     * 多文件上传 主要是使用了MultipartHttpServletRequest和MultipartFile</span><br><span class="line">	     *</span><br><span class="line">	     */</span><br><span class="line">	    @RequestMapping(value = &quot;/upload/batch&quot;, method = RequestMethod.POST)</span><br><span class="line">	    public @ResponseBody String batchUpload(HttpServletRequest request) &#123;</span><br><span class="line">	        List&lt;MultipartFile&gt; files = ((MultipartHttpServletRequest) request).getFiles(&quot;file&quot;);</span><br><span class="line">	        MultipartFile file = null;</span><br><span class="line">	        BufferedOutputStream stream = null;</span><br><span class="line">	        for (int i = 0; i &lt; files.size(); ++i) &#123;</span><br><span class="line">	            file = files.get(i);</span><br><span class="line">	            if (!file.isEmpty()) &#123;</span><br><span class="line">	                try &#123;</span><br><span class="line">	                    byte[] bytes = file.getBytes();</span><br><span class="line">	                    stream = new BufferedOutputStream(new FileOutputStream(new File(file.getOriginalFilename())));</span><br><span class="line">	                    stream.write(bytes);</span><br><span class="line">	                    stream.close();</span><br><span class="line">	                &#125; catch (Exception e) &#123;</span><br><span class="line">	                    stream = null;</span><br><span class="line">	                    return &quot;You failed to upload &quot; + i + &quot; =&gt; &quot; + e.getMessage();</span><br><span class="line">	                &#125;</span><br><span class="line">	            &#125; else &#123;</span><br><span class="line">	                return &quot;You failed to upload &quot; + i + &quot; because the file was empty.&quot;;</span><br><span class="line">	            &#125;</span><br><span class="line">	        &#125;</span><br><span class="line">	        return &quot;upload successful&quot;;</span><br><span class="line">	    &#125;</span><br><span class="line">	    </span><br><span class="line">	  </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>HTML文件配置：<br>单文件：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;title&gt;文件上传示例&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;h2&gt;文件上传示例&lt;/h2&gt;</span><br><span class="line">    &lt;hr/&gt;</span><br><span class="line">    &lt;form method=&quot;POST&quot; enctype=&quot;multipart/form-data&quot; action=&quot;/upload&quot;&gt;</span><br><span class="line">        &lt;p&gt;</span><br><span class="line">            文件：&lt;input type=&quot;file&quot; name=&quot;file&quot; /&gt;</span><br><span class="line">        &lt;/p&gt;</span><br><span class="line">        &lt;p&gt;</span><br><span class="line">            &lt;input type=&quot;submit&quot; value=&quot;上传&quot; /&gt;</span><br><span class="line">        &lt;/p&gt;</span><br><span class="line">    &lt;/form&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
-<p>批量文件：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;title&gt;批量文件上传示例&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;h2&gt;批量文件上传示例&lt;/h2&gt;</span><br><span class="line">    &lt;hr/&gt;</span><br><span class="line">    &lt;form method=&quot;POST&quot; enctype=&quot;multipart/form-data&quot;</span><br><span class="line">        action=&quot;/upload/batch&quot;&gt;</span><br><span class="line">        &lt;p&gt;</span><br><span class="line">            文件1：&lt;input type=&quot;file&quot; name=&quot;file&quot; /&gt;</span><br><span class="line">        &lt;/p&gt;</span><br><span class="line">        &lt;p&gt;</span><br><span class="line">            文件2：&lt;input type=&quot;file&quot; name=&quot;file&quot; /&gt;</span><br><span class="line">        &lt;/p&gt;</span><br><span class="line">        &lt;p&gt;</span><br><span class="line">            文件3：&lt;input type=&quot;file&quot; name=&quot;file&quot; /&gt;</span><br><span class="line">        &lt;/p&gt;</span><br><span class="line">        &lt;p&gt;</span><br><span class="line">            &lt;input type=&quot;submit&quot; value=&quot;上传&quot; /&gt;</span><br><span class="line">        &lt;/p&gt;</span><br><span class="line">    &lt;/form&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+        <ol>
+<li>pom坐标 <a id="more"></a></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">  &lt;!-- mybatis --&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.mybatis.spring.boot&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;mybatis-spring-boot-starter&lt;/artifactId&gt;</span><br><span class="line">	&lt;version&gt;1.3.1&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;mysql&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;</span><br><span class="line">	&lt;scope&gt;runtime&lt;/scope&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;com.gitee.sunchenbin.mybatis.actable&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;mybatis-enhance-actable&lt;/artifactId&gt;</span><br><span class="line">	&lt;version&gt;1.0.3&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.apache.commons&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;commons-lang3&lt;/artifactId&gt;</span><br><span class="line">	&lt;version&gt;3.4&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;net.sf.json-lib&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;json-lib&lt;/artifactId&gt;</span><br><span class="line">	&lt;version&gt;2.4&lt;/version&gt;</span><br><span class="line">	&lt;classifier&gt;jdk15&lt;/classifier&gt;</span><br><span class="line">	&lt;exclusions&gt;</span><br><span class="line">		&lt;exclusion&gt;</span><br><span class="line">			&lt;artifactId&gt;commons-logging&lt;/artifactId&gt;</span><br><span class="line">			&lt;groupId&gt;commons-logging&lt;/groupId&gt;</span><br><span class="line">		&lt;/exclusion&gt;</span><br><span class="line">	&lt;/exclusions&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;com.alibaba&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;druid&lt;/artifactId&gt;</span><br><span class="line">	&lt;version&gt;1.1.5&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>application.properties</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mybatis.table.auto=update</span><br><span class="line">mybatis.model.pack=com.haiyu.entity</span><br><span class="line">mybatis.database.type=mysql</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>application.yml</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">spring:</span><br><span class="line">  datasource:</span><br><span class="line">    driver-class-name: com.mysql.jdbc.Driver</span><br><span class="line">    url: jdbc:mysql://localhost:3306/db1?characterEncoding=utf8&amp;useSSL=false&amp;autoReconnect=true</span><br><span class="line">    username: root</span><br><span class="line">    password: root</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>MyBatisMapperScannerConfig</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">@AutoConfigureAfter(TableConfig.class)</span><br><span class="line">public class MyBatisMapperScannerConfig &#123;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public MapperScannerConfigurer mapperScannerConfigurer() throws Exception&#123;</span><br><span class="line">        MapperScannerConfigurer mapperScannerConfigurer = new MapperScannerConfigurer();</span><br><span class="line">        mapperScannerConfigurer.setBasePackage(&quot;com.haiyu.mapper.*;com.gitee.sunchenbin.mybatis.actable.dao.*&quot;);</span><br><span class="line">        mapperScannerConfigurer.setSqlSessionFactoryBeanName(&quot;sqlSessionFactory&quot;);</span><br><span class="line">        return mapperScannerConfigurer;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>TableConfig</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">@ComponentScan(basePackages = &#123;&quot;com.gitee.sunchenbin.mybatis.actable.manager.*&quot;&#125;)</span><br><span class="line">public class TableConfig &#123;</span><br><span class="line">    @Value(&quot;$&#123;spring.datasource.driver-class-name&#125;&quot;)</span><br><span class="line">    private String driver ;</span><br><span class="line"></span><br><span class="line">    @Value(&quot;$&#123;spring.datasource.url&#125;&quot;)</span><br><span class="line">    private String url ;</span><br><span class="line"></span><br><span class="line">    @Value(&quot;$&#123;spring.datasource.username&#125;&quot;)</span><br><span class="line">    private String username ;</span><br><span class="line"></span><br><span class="line">    @Value(&quot;$&#123;spring.datasource.password&#125;&quot;)</span><br><span class="line">    private String password ;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public PropertiesFactoryBean configProperties() throws Exception&#123;</span><br><span class="line">        PropertiesFactoryBean propertiesFactoryBean = new PropertiesFactoryBean();</span><br><span class="line">        PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();</span><br><span class="line">        propertiesFactoryBean.setLocations(resolver.getResources(&quot;classpath*:application.properties&quot;));</span><br><span class="line">        return propertiesFactoryBean;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public DruidDataSource dataSource() &#123;</span><br><span class="line">        DruidDataSource dataSource = new DruidDataSource();</span><br><span class="line">        dataSource.setDriverClassName(driver);</span><br><span class="line">        dataSource.setUrl(url);</span><br><span class="line">        dataSource.setUsername(username);</span><br><span class="line">        dataSource.setPassword(password);</span><br><span class="line">        dataSource.setMaxActive(30);</span><br><span class="line">        dataSource.setInitialSize(10);</span><br><span class="line">        dataSource.setValidationQuery(&quot;SELECT 1&quot;);</span><br><span class="line">        dataSource.setTestOnBorrow(true);</span><br><span class="line">        return dataSource;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public DataSourceTransactionManager dataSourceTransactionManager() &#123;</span><br><span class="line">        DataSourceTransactionManager dataSourceTransactionManager = new DataSourceTransactionManager();</span><br><span class="line">        dataSourceTransactionManager.setDataSource(dataSource());</span><br><span class="line">        return dataSourceTransactionManager;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public SqlSessionFactoryBean sqlSessionFactory() throws Exception&#123;</span><br><span class="line">        SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();</span><br><span class="line">        sqlSessionFactoryBean.setDataSource(dataSource());</span><br><span class="line">        PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();</span><br><span class="line">        sqlSessionFactoryBean.setMapperLocations(resolver.getResources(&quot;classpath*:com/gitee/sunchenbin/mybatis/actable/mapping/*/*.xml&quot;));</span><br><span class="line">        sqlSessionFactoryBean.setTypeAliasesPackage(&quot;com.haiyu.entity.*&quot;);</span><br><span class="line">        return sqlSessionFactoryBean;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="6">
+<li>Test</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">@Table(name = &quot;test&quot;)</span><br><span class="line">@Data</span><br><span class="line">public class Test extends BaseModel &#123;</span><br><span class="line"></span><br><span class="line">    private static final long serialVersionUID = 5199200306752426433L;</span><br><span class="line"></span><br><span class="line">    @Column(name = &quot;id&quot;,type = MySqlTypeConstant.INT,length = 11,isKey = true,isAutoIncrement = true)</span><br><span class="line">    private Integer id;</span><br><span class="line"></span><br><span class="line">    @Column(name = &quot;name&quot;,type = MySqlTypeConstant.VARCHAR,length = 111)</span><br><span class="line">    private String  name;</span><br><span class="line"></span><br><span class="line">    @Column(name = &quot;description&quot;,type = MySqlTypeConstant.TEXT)</span><br><span class="line">    private String  description;</span><br><span class="line"></span><br><span class="line">    @Column(name = &quot;create_time&quot;,type = MySqlTypeConstant.DATETIME)</span><br><span class="line">    private Date    create_time;</span><br><span class="line"></span><br><span class="line">    @Column(name = &quot;update_time&quot;,type = MySqlTypeConstant.DATETIME)</span><br><span class="line">    private Date    update_time;</span><br><span class="line"></span><br><span class="line">    @Column(name = &quot;number&quot;,type = MySqlTypeConstant.BIGINT,length = 5)</span><br><span class="line">    private Long    number;</span><br><span class="line"></span><br><span class="line">    @Column(name = &quot;lifecycle&quot;,type = MySqlTypeConstant.CHAR,length = 1)</span><br><span class="line">    private String  lifecycle;</span><br><span class="line"></span><br><span class="line">    @Column(name = &quot;dekes&quot;,type = MySqlTypeConstant.DOUBLE,length = 5,decimalLength = 2)</span><br><span class="line">    private Double  dekes;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="7">
+<li>TestMapper</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@Mapper</span><br><span class="line">public interface TestMapper &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -485,7 +481,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/SpringBoot/" rel="tag"> <i class="fa fa-tag"></i> SpringBoot</a>
+            <a href="/tags/Mybatis/" rel="tag"> <i class="fa fa-tag"></i> Mybatis</a>
           
         </div>
       
@@ -498,8 +494,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/30/SpringBoot集成Solr-1/" rel="next" title="SpringBoot集成Solr">
-                <i class="fa fa-chevron-left"></i> SpringBoot集成Solr
+              <a href="/2018/09/07/Linux安装Kafka/" rel="next" title="Linux安装Kafka">
+                <i class="fa fa-chevron-left"></i> Linux安装Kafka
               </a>
             
           </div>
@@ -508,8 +504,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/08/30/SpringBoot（一）：HelloWorld/" rel="prev" title="SpringBoot（一）：HelloWorld">
-                SpringBoot（一）：HelloWorld <i class="fa fa-chevron-right"></i>
+              <a href="/2018/09/07/springboot-mycat-mybatis-plus/" rel="prev" title="springboot-mycat-mybatis-plus">
+                springboot-mycat-mybatis-plus <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
